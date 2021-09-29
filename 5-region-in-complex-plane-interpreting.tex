@@ -1,0 +1,69 @@
+\question %  2003 Exam, Q1.
+
+\begin{parts}
+
+\part[4]
+If $(\conj{a - 3i})(1 - i) = b + i$, find the real numbers $a$ and $b$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[3in]
+Let $z = (\conj{a - 3i})(1 - i)$ and let $w = b + i$. We have
+\begin{align*}
+	(\conj{a - 3i})(1 - i) &= (a + 3i)(1 - i) \\
+	&= a - ai + 3i - 3i^2 \\
+	&= a + 3 + i(3 - a) && (i^2 = -1).
+\end{align*}
+Now, $\Im(z) = 3 - a$ and $\Im(w) = 1$. Equating imaginary parts yields $3 - a = 1$. So, $a = 2$. Moreover, $\Re(z) = a + 3$ and $\Re(w) = b$. Thus, $b = 2 + 3$. So the solution is $a = 2$, $b = 5$.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\uplevel{The shaded region $D$ in Figure~\ref{fig:region-in-the-complex-plane} represents a set of complex numbers.}
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        my axis style,
+        axis equal,
+        xmin=-.25,
+        xmax=2.25,
+        ymin=-2.25,
+        ymax=.75,
+        xtick=\empty,
+        ytick={-1},
+        extra x ticks={1},
+        extra x tick style={
+            xticklabel style={
+                yshift=0.5ex,
+                anchor=south,
+            },
+        },
+        xlabel=$\Re$,
+        ylabel=$\Im$,
+    ]
+    \coordinate (C) at (1,-1);
+    \addplot[
+        black,
+        pattern=north west lines,
+        pattern color=gray!60,
+    ] ({cos(x) + 1}, {sin(x) - 1}) node[pos=.25, right, xshift=90pt] {boundary included};
+    \fill (C) node[fill=white, xshift=15pt, yshift=-25pt] {$D$} circle (2pt);
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Shaded region $D$.}
+    \label{fig:region-in-the-complex-plane}
+\end{figure}
+
+\part[4]
+Write an inequality in $z$ that describes the shaded region in Figure~\ref{fig:region-in-the-complex-plane}.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2in]
+The circle has radius $1$ and is centred at the complex number $c = 1 - i$. Thus,
+\[
+    D = \{z \in \C : \abs{z - (1 - i)} \leq 1\}.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}

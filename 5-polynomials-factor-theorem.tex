@@ -1,0 +1,68 @@
+\question % 2012 Exam, Q5.
+Let $P(x) = x^3 + ax + b$, where $a$ and $b$ are constants.
+
+\begin{parts}
+
+\part[2]
+Given that $x + 1$ is a factor of $P(x)$, show that $b - a = 1$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.75in]
+By the factor theorem, $P(-1) = 0$ but
+\begin{align*}
+	P(-1) &= (-1)^3 - a + b \\
+	&= b - a - 1
+\end{align*}
+and
+\begin{align}
+    b - a - 1 &= 0 \nonumber \\
+    b - a &= 1 \label{eq:1}.
+\end{align}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[1]
+When $P(x)$ is divided by $x + 2$, the remainder is $6$. Show that $b - 2a = 14$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.75in]
+By the remainder theorem, $P(-2) = 6$ but
+\begin{align*}
+	P(-2) &= (-2)^3 - 2a + b \\
+	&= b - 2a - 8
+\end{align*}
+and
+\begin{align}
+    b - 2a - 8 &= 6 \nonumber \\
+	b - 2a &= 14 \label{eq:2}.
+\end{align}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[2]
+Find $a$ and $b$, and hence write $P(x)$ as a product of linear factors.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2in]
+Subtracting (\ref{eq:1}) from (\ref{eq:2}) leaves $-a = 13$, so $a = -13$. Thus, $b = -12$ and
+\begin{align*}
+	P(x) &= x^3 - 13x - 12 \\
+	&= (x + 1)(x^2 - x - 12) \\
+	&= (x + 3)(x + 1)(x - 4).
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[2]
+Divide $P(x)$ from part (c) by $x - 4$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+Through synthetic division we get
+\[
+    \polyhornerscheme[x = 4]{x^3 - 13x - 12}
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}

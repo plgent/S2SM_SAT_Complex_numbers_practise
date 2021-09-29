@@ -1,0 +1,105 @@
+\documentclass[
+    a4paper,
+    12pt,
+    addpoints,
+    % answers,
+    noanswers,
+    hidelinks,
+]
+{exam}
+
+%%% Packages and macros
+
+\usepackage{1-preamble}
+
+%%% Page layout
+
+\input{2-layout}
+
+%%% Subject, paper and conditions
+
+\newcommand{\subject}{Stage 2 Specialist Mathematics}
+\newcommand{\papername}{SAT: Complex Numbers (Practise)}
+\newcommand{\papernameshort}{Complex Numbers (Practise)}
+\newcommand{\timelimit}{$\infty$~Minutes}
+\newcommand{\conditions}{Notes, Calculator}
+\newcommand{\paperrules}{\timelimit, \conditions}
+
+\begin{document}
+
+% \input{3-cover-letter}
+
+\begin{questions}
+
+\ifprintanswers
+\else
+\fullwidth{You and your supervisor must \textbf{write your names} to agree that exam conditions were satisfied.}
+\fi
+
+\input{5-polynomials-factor-theorem}
+
+\ifprintanswers
+\threeast
+\else
+\fi
+
+\input{5-complex-numbers-power}
+
+\ifprintanswers
+\threeast
+\else
+\fi
+
+\input{5-region-in-complex-plane-interpreting}
+
+\ifprintanswers
+\threeast
+\else
+\fi
+
+\input{5-complex-number-geometry}
+
+\ifprintanswers
+\threeast
+\else
+\fi
+
+\input{5-region-in-complex-plane-drawing}
+
+\ifprintanswers
+\triast
+\else
+\fi
+
+\uplevel{
+\begin{theorem}
+\label{thm:sum-of-geometric-series}
+Let $z \neq 1$ be a complex number and let $n$ be a positive integer. Then
+\[
+    1 + z + z^2 + \cdots + z^{n - 1} = \frac{z^n - 1}{z - 1}.
+\]
+\end{theorem}
+}
+
+\input{5-proof-of-sum-of-geometric-series-by-induction}
+
+\threeast
+
+\input{5-real-quadratic-factors-of-sextic-polynomial}
+
+\ifprintanswers
+\threeast
+\else
+\fi
+
+\input{5-de-moivre's-theorem}
+
+\end{questions}
+
+\vfill
+
+\input{8-grading-table}
+
+\input{9-formulae-sheet}
+
+\end{document}

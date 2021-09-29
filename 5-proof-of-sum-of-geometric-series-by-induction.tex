@@ -1,0 +1,28 @@
+\question[5] % MASA 2019 Trial Exam, Q5.
+Prove Theorem~\ref{thm:sum-of-geometric-series} using mathematical induction.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[4.5in]
+\begin{proof}
+$P(n)$ is: $\displaystyle{\sum_{j = 0}^{n - 1} z^j = \frac{z^n - 1}{z - 1}}$, for all $z \neq 1$ and $n \in \Z^+$.
+
+\textbf{Basis}: If $n = 1$, then the LHS is $z^0 = 1$ and the RHS is
+\[
+	\frac{z^1 - 1}{z - 1} = 1 \qquad (z \neq 1).
+\]
+So, $P(1)$ is true.
+
+\textbf{Inductive step}: If $P(k)$ is true, then for all $k \in \Z^+$ we have
+\[
+	\sum_{j = 0}^{k - 1} z^j = \frac{z^k - 1}{z - 1}.
+\]
+Now,
+\begin{align*}
+	\sum_{j = 0}^k z^j &= z^k + \pfrac{z^k - 1}{z - 1} && (\textrm{by hypothesis}) \\
+	&= \frac{z^k(z - 1) + z^k - 1}{z - 1} \\
+	&= \frac{z^{k + 1} - 1}{z - 1}.
+\end{align*}
+Since $P(1)$ is true, and $P(k) \implies P(k + 1)$, by the PMI $P(n)$ is true for all $n \in \Z^+$.
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}
